@@ -6,7 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Repository for storing neural network's samples, containing numbers.
+ * Repository for storing neural network's samples, containing numbers
+ * and optional header.
  * @param <T> A numerical type that the samples hold.
  * @author Konstantin Zhdanov
  */

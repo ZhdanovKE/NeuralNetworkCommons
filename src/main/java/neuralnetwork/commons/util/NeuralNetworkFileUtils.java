@@ -30,7 +30,7 @@ public class NeuralNetworkFileUtils {
      * {@code fileName}.
      * @param nn {@link NeuralNetwork} to be written in file {@code fileName} along
      * with the name {@code name}.
-     * @param name {@code String} name to be written in file {@code fileName} along 
+     * @param name {@link String} name to be written in file {@code fileName} along 
      * with the network {@code nn}.
      * @param fileName Path to the file where the {@code nn} will be saved.
      * @throws NullPointerException if {@code nn}, {@code name} or {@code fileName}
@@ -58,7 +58,7 @@ public class NeuralNetworkFileUtils {
      * path {@code fileName} as text.
      * @param nn {@link NeuralNetwork} to be written in file {@code fileName} along
      * with the name {@code name}.
-     * @param name {@code String} name to be written in file {@code fileName} along 
+     * @param name {@link String} name to be written in file {@code fileName} along 
      * with the network {@code nn}.
      * @param fileName Path to the file where the {@code nn} will be saved.
      * @throws NullPointerException if {@code nn}, {@code name} or {@code fileName}
@@ -152,8 +152,8 @@ public class NeuralNetworkFileUtils {
     /**
      * Load instance of {@link NeuralNetwork} from a binary file with path 
      * {@code fileName}.
-     * @param fileName {@code String} path to a binary file containing an
-     * instance of {@code NeuralNetwork}.
+     * @param fileName {@link String} path to a binary file containing an
+     * instance of {@link NeuralNetwork}.
      * @return An instance of {@link NeuralNetwork} loaded from file {@code fileName}.
      * @throws NullPointerException if {@code fileName} is {@code null}.
      * @throws IllegalArgumentException if there was an error while reading the
@@ -182,8 +182,8 @@ public class NeuralNetworkFileUtils {
     /**
      * Load instance of {@link NeuralNetwork} from a text file with path 
      * {@code fileName}.
-     * @param fileName {@code String} path to a text file containing an
-     * instance of {@code NeuralNetwork}.
+     * @param fileName {@link String} path to a text file containing an
+     * instance of {@link NeuralNetwork}.
      * @return An instance of {@link NeuralNetwork} loaded from file {@code fileName}.
      * @throws NullPointerException if {@code fileName} is {@code null}.
      * @throws IllegalArgumentException if there was an error while reading the

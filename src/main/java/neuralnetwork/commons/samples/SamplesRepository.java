@@ -26,7 +26,7 @@ public class SamplesRepository<T extends Number> {
     
     /**
      * Add a sample into this repository.
-     * @param sample {@code List} of numerical values to be add as a sample.
+     * @param sample {@link List} of numerical values to be add as a sample.
      * @throws NullPointerException if {@code sample} is null.
      */
     public void add(List<T> sample) {
@@ -47,7 +47,7 @@ public class SamplesRepository<T extends Number> {
     
     /**
      * Set the {@code header} list as the headers (names) for the samples' variables.
-     * @param header {@code List} of {@String} values of header for every variable
+     * @param header {@link List} of {@link String} values of header for every variable
      * in each sample.
      * @throws NullPointerException if {@code header} is null.
      */
@@ -62,7 +62,7 @@ public class SamplesRepository<T extends Number> {
      * values: "Var 1", "Var 2", ..., "Var n". 
      * If no samples have ever been loaded in this repository and the header
      * hasn't been set explicitly, the returned list will be empty.
-     * @return {@code List} of {@code String} header (names) values for the 
+     * @return {@link List} of {@link String} header (names) values for the 
      * samples' variables. The returned list is unmodifiable.
      */
     public List<String> getHeader() {
@@ -83,7 +83,7 @@ public class SamplesRepository<T extends Number> {
     /**
      * Get the sample with index {@code idx} from this repository.
      * @param idx The index of the sample to be returned.
-     * @return {@code List} of numerical values that this repository holds
+     * @return {@link List} of numerical values that this repository holds
      * under the index {@code idx}. Any changes to this list will change the
      * object this repository holds.
      * @throws IllegalArgumentException if {@code idx} is out of range.
@@ -94,7 +94,7 @@ public class SamplesRepository<T extends Number> {
     
     /**
      * Get all samples this repository holds.
-     * @return {@code List} of all samples this repository holds. Any changes
+     * @return {@link List} of all samples this repository holds. Any changes
      * to this list will change the samples this repository holds.
      */
     public List<List<T>> getAll() {

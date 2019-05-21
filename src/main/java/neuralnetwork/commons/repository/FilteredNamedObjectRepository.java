@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
- * A wrapper around a {@code NamedObjectRepository} that creates a view of its
+ * A wrapper around a {@link NamedObjectRepository} that creates a view of its
  * elements after filtering.
  * @param <T> Type of objects to store in the repository.
  * @author Konstantin Zhdanov
@@ -17,11 +17,28 @@ public class FilteredNamedObjectRepository<T> extends NamedObjectRepository<T>{
             get(name) != null;
     
     private NamedObjectRepository<T> repository;
-            
+    
+    /**
+     * Create a filtered view of the repository {@link NamedObjectRepository} with
+     * the identity filter (allows every element).
+     * @param repository Instance of {@link NamedObjectRepository} to be filtered.
+     * @throws NullPointerException if {@code repository} is null.
+     */
     public FilteredNamedObjectRepository(NamedObjectRepository<T> repository) {
         this(repository, t -> true);
     }
     
+    /**
+     * Create a filtered view of the repository {@link NamedObjectRepository} with
+     * the provided filter.
+     * @param repository Instance of {@link NamedObjectRepository} to be filtered.
+     * @param objectFilter {@link Predicate} to be used to filter the elements of
+     * {@code repository}. If {@code objectFilter} returns {@code true} for 
+     * an element of {@code repository}, this element is considered included in
+     * this view.
+     * @throws NullPointerException if {@code repository} or {@code objectFilter}
+     * is null.
+     */
     public FilteredNamedObjectRepository(NamedObjectRepository<T> repository, 
             Predicate<T> objectFilter) {
         if (repository == null) {
